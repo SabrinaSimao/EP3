@@ -1,0 +1,434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>TkDocs - Tk Tutorial</title>
+	<meta http-equiv="Content-Language" content="English" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Modern Tk Tutorial for Tcl, Ruby, Python and Perl" />
+	<meta name="keywords" content="TkDocs, Tk, Tkinter, Tkx, GUI, Tcl, Python, Perl, Ruby" />	
+	<link rel="stylesheet" type="text/css" href="../tk.css" media="screen,print" />
+	<link rel="alternate" type="application/atom+xml" title="Atom" href="http://blog.tkdocs.com/atom.xml" />
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://blog.tkdocs.com/rss.xml" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2043168-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  function show_ebook_info() {
+    var el = document.getElementById("ebookoverlay");
+    if (el!=null && el.style.visibility != "visible") {el.style.visibility = "visible";}
+  }
+
+  function close_ebook_info() {
+    var el = document.getElementById("ebookoverlay");
+    if (el!=null && el.style.visibility != "hidden") {el.style.visibility = "hidden";}
+  }
+  document.onkeyup = function(e) { if (e.keyCode == 27) {close_ebook_info();}}
+
+</script>
+</head>
+<body>
+	
+<div class="content">
+	<div id="top">
+				<div id="icons">
+					
+				<!--	<a href="#" title="Sitemap"><img src="../images/sitemap.gif" alt="Sitemap" /></a> -->
+					<!-- Google CSE Search Box Begins  -->
+					<form action="http://www.tkdocs.com/search.html" id="searchbox_001059925335584653082:ae-b1le7gu4">
+					  <input type="hidden" name="cx" value="001059925335584653082:ae-b1le7gu4" />
+					  <input type="hidden" name="cof" value="FORID:11" />
+					  <input type="text" name="q" size="25" />
+					  <input type="submit" name="sa" value="Search" />
+						<a href="../index.html" title="Home page"><img src="../images/home.gif" alt="Home" /></a>
+						<a href="../about.html#contact" title="Contact us"><img src="../images/contact.gif" alt="Contact" /></a>
+					</form>
+					<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_001059925335584653082%3Aae-b1le7gu4&lang=en"></script>
+					<!-- Google CSE Search Box Ends -->
+				</div>
+				<p class=sitename>TkDocs</p>
+				<p class=sitetag>Information you need to build high-quality Tk user interfaces.</p>
+	</div>
+
+	<div id="menu">
+		<ul>	
+			<li><a href="../index.html" title="home">HOME</a></li>
+			<li><a class='current' href="../tutorial/index.html" title="Tutorial">TUTORIAL</a></li>
+			<li><a href="../widgets/index.html" title="Widget Roundup">WIDGETS</a></li>
+			<li><a href="../gallery/index.html" title="Gallery">GALLERY</a></li>
+			<li><a href="../resources/index.html" title="Additional Resources">RESOURCES</a></li>
+			<li><a href="http://blog.tkdocs.com/" title="Weblog">WEBLOG</a></li>
+			<li><a href="../about.html" title="About">ABOUT</a></li>
+		</ul>
+	</div>
+
+	<div id="main">
+
+
+<script type="text/javascript" src="../prototype.js"></script>
+
+
+
+<div id="ebookoverlay">
+     <div id="ebook">
+	<div id='close'><a href='javascript:close_ebook_info();'><img src='../images/closeicon.png' alt=close></a></div>
+	<p style='margin-left:25px;text-align:left;'>
+		<img style='float:left;padding-right:7px;' src='../images/EbookMini.png' width=80 height=107 alt='Modern Tkinter ebook'>
+		If you've found the material on this site useful, please consider purchasing this
+		e-book (only $10), which is based on the Python material in the tutorial.  Doing so helps me
+		maintain and update this site.  Thank you very much!
+	</p>
+	<p style='text-align:left;vertical-align:bottom;'><img style='float:left;padding-right:15px;padding-left:50px;' src='../images/marksig.png'> <br>&nbsp;<br>&nbsp;<br><a href='http://twitter.com/markroseman'><em>@markroseman</em></a><br><a href='mailto:mark@markroseman.com'><em>mark@markroseman.com</em></a></p>
+	<p style='clear:both;'>&nbsp;</p>
+<p style='text-align:left;clear:both;'><a href='http://www.amazon.com/dp/B0071QDNLO' onclick="_gaq.push(['_trackPageview', '/visit_amazon_py.html'])" target='_blank'><img src='../images/kindle.png' style='float:left;padding-right:5px;' alt=Kindle> <b>Buy now for your Kindle</b><br>Kindle apps are also available for most smartphones, tablets, and desktops. Payment and download handled by Amazon's Kindle Store. </a></p>
+<p>&nbsp;</p>
+<p style='text-align:left;'><a href='http://transactions.sendowl.com/products/16119/DB9F3BFF/add_to_cart' rel='nofollow' onclick="_gaq.push(['_trackPageview', '/visit_ddapp_py.html'])" target='_blank'><img src='../images/pdf.png' style='float:left;padding-right:5px' alt=PDF><b> Buy the DRM-free PDF</b><br>Downloads handled by SendOwl.com. Payment handled via PayPal<br>(click "Don't have a PayPal account" to use a credit card).</a></p>
+     </div>
+</div>
+<div id="right_side"><div class="pad"><div style='border:2px solid #616161;padding:5px;background-color:#b5de54;margin-bottom:10px;margin-right:5px;padding-right:3px;line-height:15px;text-align:left;'><p><a href='javascript:show_ebook_info()' style='color:black;font-size:11px;' title='Click for more info on this e-book, available for Amazon Kindle or as a DRM-free PDF.' onclick="_gaq.push(['_trackPageview', '/show_ebook_info.html']);show_ebook_info();return false;" target='_blank'><span style='font-size:18px;font-weight:bold;'>Hey Python Users!</span><br><img style='float:left;padding-right:7px;padding-top:4px;' src='../images/EbookMini.png' width=80 height=107 alt='Modern Tkinter ebook'><b>&nbsp;<br>Like TkDocs? <br>&nbsp;<br>Check out the e&#8209;book <em>Modern Tkinter!</em><br>&nbsp;<br></b></a></p></div>
+<img src="../images/pic.jpg" alt="" title="Click for Application Gallery"/>
+<h3>Essentials</h3>
+<ul>	
+	<li><a href="../resources/backgrounder.html">Tk Backgrounder</a></li>
+	<li><a href="../tutorial/install.html">Installing Tk</a></li>
+	<li><a href="../tutorial/index.html">Tutorial</a></li>
+	<li><a href="../widgets/index.html">Widget Roundup</a></li>
+	<li><a href="../resources/languages.html">Languages Using Tk</a></li>
+	<li><a href="http://www.tcl.tk/man/tcl8.5/TkCmd/contents.htm">Official Tk Command Reference<br>(Tcl-oriented; at www.tcl.tk)</a></li>		
+</ul>
+
+<h3>Tutorial</h3>
+<FORM name="langform" id="langform" class=langselector> 
+Show:
+<SELECT name="langs" id="languageselect" onChange="adjustView(document.getElementById('languageselect').options[document.getElementById('languageselect').selectedIndex].value);"> 
+<OPTION value="tcl">Tcl 
+<OPTION value="ruby">Ruby
+<OPTION value="perl">Perl
+<OPTION value="python">Python
+<OPTION selected value="all">All Languages 
+</SELECT> 
+</form>
+
+
+<ul>
+<li><a href="index.html">Table of Contents</a></li>
+<li><a href="intro.html">Introduction</a></li>
+<li><a href="install.html">Installing Tk</a></li>
+<li><a href="firstexample.html">A First (Real) Example</a></li>
+<li><a href="concepts.html">Tk Concepts</a></li>
+<li><a href="widgets.html">Basic Widgets</a></li>
+<li><a href="grid.html">The Grid Geometry Manager</a></li>
+<li><a href="morewidgets.html">More Widgets</a></li>
+<li><a href="menus.html">Menus</a></li>
+<li><a href="windows.html">Windows and Dialogs</a></li>
+<li><a href="complex.html">Organizing Complex Interfaces</a></li>
+<li><a href="fonts.html">Fonts, Colors, Images</a></li>
+<li><a href="canvas.html">Canvas</a></li>
+<li><a href="text.html">Text</a></li>
+<li><a href="tree.html">Tree</a></li>
+<li><a href="styles.html">Styles and Themes</a></li>
+<li><a href="idle.html">Case Study: IDLE Modernization</a></li>
+</ul>
+
+
+</div></div><div id="left_side"><div class="intro"><div class="pad">
+This tutorial will quickly get you up and running with the latest Tk from Tcl, Ruby, Perl or Python on Mac, Windows or Linux.
+It provides all the essentials about core Tk concepts, the various widgets, layout, events and more that you need for your application.
+
+
+</div></div><div class="mpart">
+
+
+<script type="text/javascript" src="tutorial.js"></script>
+
+<p>&nbsp;</p>
+<div class=tutorial>
+<p class=nav>Previous &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Contents &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; <a href="onepage.html">Single Page</a> &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; <a href="intro.html">Next: Introduction</a></p>
+<ol id=toc>
+
+<li><a href="intro.html">Introduction</a></li>
+
+<ul>
+
+<li><a href="intro.html#audience">Who this Tutorial is for</a></li>
+
+<li><a href="intro.html#bestpractices">Modern Best Practices</a></li>
+
+<li><a href="intro.html#betterway">The Better Way Forward</a></li>
+
+<li><a href="intro.html#usage">How to Use</a></li>
+
+</ul>
+
+<li><a href="install.html">Installing Tk</a></li>
+
+<ul>
+
+<li><a href="install.html#installmac">Installing Tk on Mac OS X</a></li>
+
+<li><a href="install.html#installwin">Installing Tk on Windows</a></li>
+
+<li><a href="install.html#installlinux">Installing Tk on Linux</a></li>
+
+<li><a href="install.html#helloworld">The Obligatory First Program</a></li>
+
+</ul>
+
+<li><a href="firstexample.html">A First (Real) Example</a></li>
+
+<ul>
+
+<li><a href="firstexample.html#design">Design</a></li>
+
+<li><a href="firstexample.html#code">Code</a></li>
+
+<li><a href="firstexample.html#walkthrough">Step-by-Step Walkthrough</a></li>
+
+<li><a href="firstexample.html#missing">What's Missing</a></li>
+
+</ul>
+
+<li><a href="concepts.html">Tk Concepts</a></li>
+
+<ul>
+
+<li><a href="concepts.html#widgets">Widgets</a></li>
+
+<li><a href="concepts.html#geometry">Geometry Management</a></li>
+
+<li><a href="concepts.html#events">Event Handling</a></li>
+
+</ul>
+
+<li><a href="widgets.html">Basic Widgets</a></li>
+
+<ul>
+
+<li><a href="widgets.html#frame">Frame</a></li>
+
+<li><a href="widgets.html#label">Label</a></li>
+
+<li><a href="widgets.html#button">Button</a></li>
+
+<li><a href="widgets.html#checkbutton">Checkbutton</a></li>
+
+<li><a href="widgets.html#radiobutton">Radiobutton</a></li>
+
+<li><a href="widgets.html#entry">Entry</a></li>
+
+<li><a href="widgets.html#combobox">Combobox</a></li>
+
+</ul>
+
+<li><a href="grid.html">The Grid Geometry Manager</a></li>
+
+<ul>
+
+<li><a href="grid.html#colsrows">Columns and Rows</a></li>
+
+<li><a href="grid.html#span">Spanning Multiple Cells</a></li>
+
+<li><a href="grid.html#incell">Layout within the Cell</a></li>
+
+<li><a href="grid.html#resize">Handling Resize</a></li>
+
+<li><a href="grid.html#padding">Padding</a></li>
+
+<li><a href="grid.html#morefeatures">Additional Grid Features</a></li>
+
+</ul>
+
+<li><a href="morewidgets.html">More Widgets</a></li>
+
+<ul>
+
+<li><a href="morewidgets.html#listbox">Listbox</a></li>
+
+<li><a href="morewidgets.html#scrollbar">Scrollbar</a></li>
+
+<li><a href="morewidgets.html#sizegrip">SizeGrip</a></li>
+
+<li><a href="morewidgets.html#text">Text</a></li>
+
+<li><a href="morewidgets.html#progressbar">Progressbar</a></li>
+
+<li><a href="morewidgets.html#scale">Scale</a></li>
+
+<li><a href="morewidgets.html#spinbox">Spinbox</a></li>
+
+</ul>
+
+<li><a href="menus.html">Menus</a></li>
+
+<ul>
+
+<li><a href="menus.html#menubars">Menubars</a></li>
+
+<li><a href="menus.html#platformmenus">Platform Menus</a></li>
+
+<li><a href="menus.html#popupmenus">Contextual Menus</a></li>
+
+</ul>
+
+<li><a href="windows.html">Windows and Dialogs</a></li>
+
+<ul>
+
+<li><a href="windows.html#createdestroy">Creating and Destroying Windows</a></li>
+
+<li><a href="windows.html#wm">Changing Window Behavior and Styles</a></li>
+
+<li><a href="windows.html#dialogs">Standard Dialogs</a></li>
+
+</ul>
+
+<li><a href="complex.html">Organizing Complex Interfaces</a></li>
+
+<ul>
+
+<li><a href="complex.html#separator">Separator</a></li>
+
+<li><a href="complex.html#labelframe">Label Frames</a></li>
+
+<li><a href="complex.html#panedwindow">Paned Windows</a></li>
+
+<li><a href="complex.html#notebook">Notebook</a></li>
+
+</ul>
+
+<li><a href="fonts.html">Fonts, Colors, Images</a></li>
+
+<ul>
+
+<li><a href="fonts.html#fonts">Fonts</a></li>
+
+<li><a href="fonts.html#colors">Colors</a></li>
+
+<li><a href="fonts.html#images">Images</a></li>
+
+</ul>
+
+<li><a href="canvas.html">Canvas</a></li>
+
+<ul>
+
+<li><a href="canvas.html#creating">Creating Items</a></li>
+
+<li><a href="canvas.html#attributes">Item Attributes</a></li>
+
+<li><a href="canvas.html#bindings">Bindings</a></li>
+
+<li><a href="canvas.html#tags">Tags</a></li>
+
+<li><a href="canvas.html#modify">Modifying Items</a></li>
+
+<li><a href="canvas.html#scrolling">Scrolling</a></li>
+
+<li><a href="canvas.html#types">Other Item Types</a></li>
+
+</ul>
+
+<li><a href="text.html">Text</a></li>
+
+<ul>
+
+<li><a href="text.html#basics">The Basics</a></li>
+
+<li><a href="text.html#modifying">Modifying the Text in Code</a></li>
+
+<li><a href="text.html#tags">Formatting with Tags</a></li>
+
+<li><a href="text.html#bindings">Events and Bindings</a></li>
+
+<li><a href="text.html#selection">Selecting Text</a></li>
+
+<li><a href="text.html#marks">Marks</a></li>
+
+<li><a href="text.html#images">Images and Widgets</a></li>
+
+<li><a href="text.html#more">Even More</a></li>
+
+</ul>
+
+<li><a href="tree.html">Tree</a></li>
+
+<ul>
+
+<li><a href="tree.html#adding">Adding Items to the Tree</a></li>
+
+<li><a href="tree.html#rearranging">Rearranging Items</a></li>
+
+<li><a href="tree.html#iteminfo">Displaying Information for each Item</a></li>
+
+<li><a href="tree.html#appearance">Item Appearance and Events</a></li>
+
+<li><a href="tree.html#display">Customizing the Display</a></li>
+
+</ul>
+
+<li><a href="styles.html">Styles and Themes</a></li>
+
+<ul>
+
+<li><a href="styles.html#definitions">Definitions</a></li>
+
+<li><a href="styles.html#using">Using Styles and Themes</a></li>
+
+<li><a href="styles.html#insidestyle">What's Inside a Style?</a></li>
+
+<li><a href="styles.html#styleoptions">Changing Style Options</a></li>
+
+<li><a href="styles.html#whydifficult">Sound Difficult to you?</a></li>
+
+<li><a href="styles.html#moreelements">Advanced: More on Elements</a></li>
+
+</ul>
+
+<li><a href="idle.html">Case Study: IDLE Modernization</a></li>
+
+<ul>
+
+<li><a href="idle.html#idlegoals">Project Goals</a></li>
+
+<li><a href="idle.html#idlemenus">Menus</a></li>
+
+<li><a href="idle.html#idlemainwin">Main Window</a></li>
+
+<li><a href="idle.html#idleprefs">Preferences Dialog</a></li>
+
+<li><a href="idle.html#idledialogs">Other Dialogs</a></li>
+
+<li><a href="idle.html#idleintegration">Window Integration</a></li>
+
+<li><a href="idle.html#idlehacks">Workarounds, Hacks, and More</a></li>
+
+</ul>
+
+</ol>
+
+<p class=nav>Previous &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Contents &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; <a href="onepage.html">Single Page</a> &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; <a href="intro.html">Next: Introduction</a></p>
+<script type="text/javascript">setDefaultLang();</script>
+</div>
+
+	</div>
+	<div id="footer">
+		<div class="right">&copy; 2007-2015 Mark Roseman (<a class=noimg href="http://twitter.com/markroseman">@markroseman</a>) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ca/">
+		<img alt="Creative Commons License" title="Creative Commons Attribution-Noncommercial-Share Alike 2.5 Canada License" style="border-width:0;vertical-align:bottom;" src="../images/cc.png" />
+		</a> &#8212; see <a href="../about.html">About</a> for details
+		</div>
+	</div>
+</div>
+</div>
+
+</body>
+</html>
+
+
+
