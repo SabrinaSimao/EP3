@@ -20,20 +20,40 @@ class Tabuleiro:
         
         self.botao_0_0= tk.Button(self.janela)
         self.botao_0_0.configure(comand=#futuro comando)
-        self.botao_0_0.grid(row=0, colum=1, sick="nsew")
+        self.botao_0_0.grid(row=0, colum=0, sick="nsew")
         
         self.botao_0_1= tk.Button(self.janela)
+        self.botao_0_0.configure(comand=#futuro comando)
+        self.botao_0_0.grid(row=0, colum=0, sick="nsew")
 
         self.botao_0_2= tk.Button(self.janela)
-
+        self.botao_0_0.configure(comand=#futuro comando)
+        self.botao_0_0.grid(row=0, colum=0, sick="nsew")
+        
         self.botao_1_0= tk.Button(self.janela)
+        self.botao_0_0.configure(comand=#futuro comando)
+        self.botao_0_0.grid(row=0, colum=0, sick="nsew")
 
         self.botao_1_1= tk.Button(self.janela)
-
+        self.botao_0_0.configure(comand=#futuro comando)
+        self.botao_0_0.grid(row=0, colum=0, sick="nsew")
+        
         self.botao_1_2= tk.Button(self.janela)
-
+        self.botao_0_0.configure(comand=#futuro comando)
+        self.botao_0_0.grid(row=0, colum=0, sick="nsew")
+        
         self.botao_2_0= tk.Button(self.janela)
-
+        self.botao_0_0.configure(comand=#futuro comando)
+        self.botao_0_0.grid(row=0, colum=0, sick="nsew")
+        
         self.botao_2_1= tk.Button(self.janela)
+        self.botao_0_0.configure(comand=#futuro comando)
+        self.botao_0_0.grid(row=0, colum=0, sick="nsew")
 
         self.botao_2_2= tk.Button(self.janela)
+        self.botao_0_0.configure(comand=#futuro comando)
+        self.botao_0_0.grid(row=0, colum=0, sick="nsew")
+
+        def iniciar(self):
+            self.janela
+
