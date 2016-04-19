@@ -6,6 +6,7 @@ Created on Tue Apr 19 08:45:35 2016
 """
 
 import tkinter as tk
+
 class Tabuleiro:
     def __init__(self):
         self.janela = tk.Tk()
