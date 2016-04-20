@@ -17,12 +17,12 @@ class Jogo:
     def recebe_jogada(self, linha, coluna):
         self.player2 ^= 1        
         self.player1 ^= 1
+        #perguntar pro fabio sobre ler a matriz
         
-"""OK CLARAMENTE SE VE O PROBLEMA COM ESSE SWAP *se mata*
- Achei um legal na internet pra ficar flipando valores booleanos, vou dar commit nisso e atualizar depois
- Teoricamente, isso deve funcionar. Existem infinitos jeitos de fazer o swap, aqui vai o link por curiosidade:
- http://stackoverflow.com/questions/1779286/swapping-1-with-0-and-0-with-1-in-a-pythonic-way  """
-        
+        """OK CLARAMENTE SE VE O PROBLEMA COM ESSE SWAP *se mata*
+         Achei um legal na internet pra ficar flipando valores booleanos, vou dar commit nisso e atualizar depois
+         Teoricamente, isso deve funcionar. Existem infinitos jeitos de fazer o swap, aqui vai o link por curiosidade:
+         http://stackoverflow.com/questions/1779286/swapping-1-with-0-and-0-with-1-in-a-pythonic-way  """
         
     def verifica_ganhador(self):
         """nesta parte do codigo, vamos usar uma lógica que achei muito interessante na internet,
@@ -64,3 +64,9 @@ class Jogo:
                 return 0
         else:
             return -1
+    
+    
+    def limpa_jogadas(self):
+        if verifica_ganhador(self) != -1:
+            self.matriz_geral = [[0,0,0],[0,0,0],[0,0,0]]
+        #preciso resolver o bug aqui
