@@ -10,11 +10,19 @@ class Jogo:
     
     def __init__ (self, matriz_geral):
         self.matriz_geral = matriz_geral
+        self.player1 = True
+        self.player2 = False
         #alguem me salva com isso?!?! :(
         
-    def recebe_jogada(linha, coluna):
-        #fazendo agora, Noal.
-        banana
+    def recebe_jogada(self, linha, coluna):
+        if self.player1 == True:
+            self.player2 = True
+            self.player1 = False
+        if self.player2 == True:
+            self.player1 = True
+            self.player2 = False
+            #OK CLARAMENTE SE VE O PROBLEMA COM ESSE SWAP *se mata*
+            #Achei um legal na internet pra ficar flipando valores booleanos, vou dar commit nisso e atualizar depois
         
         
         
