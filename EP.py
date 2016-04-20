@@ -15,15 +15,13 @@ class Jogo:
         #alguem me salva com isso?!?! :(
         
     def recebe_jogada(self, linha, coluna):
-        if self.player1 == True:
-            self.player2 = True
-            self.player1 = False
-        if self.player2 == True:
-            self.player1 = True
-            self.player2 = False
-            #OK CLARAMENTE SE VE O PROBLEMA COM ESSE SWAP *se mata*
-            #Achei um legal na internet pra ficar flipando valores booleanos, vou dar commit nisso e atualizar depois
+        self.player2 ^= 1        
+        self.player1 ^= 1
         
+"""OK CLARAMENTE SE VE O PROBLEMA COM ESSE SWAP *se mata*
+ Achei um legal na internet pra ficar flipando valores booleanos, vou dar commit nisso e atualizar depois
+ Teoricamente, isso deve funcionar. Existem infinitos jeitos de fazer o swap, aqui vai o link por curiosidade:
+ http://stackoverflow.com/questions/1779286/swapping-1-with-0-and-0-with-1-in-a-pythonic-way  """
         
         
     def verifica_ganhador(self):
