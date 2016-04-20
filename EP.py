@@ -4,20 +4,22 @@ Created on Tue Apr 19 00:11:46 2016
 
 @author: sabri
 """
-matriz_geral = [[0,0,0],[0,0,0],[0,0,0]]
 
 class Jogo:
     
-    def __init__ (self, matriz_geral):
-        self.matriz_geral = matriz_geral
-        self.player1 = True
-        self.player2 = False
+    def __init__ (self):
+        self.matriz_geral = [[0,0,0],[0,0,0],[0,0,0]]
+        self.player = 1
         #alguem me salva com isso?!?! :(
         
     def recebe_jogada(self, linha, coluna):
-        self.player2 ^= 1        
-        self.player1 ^= 1
-        #perguntar pro fabio sobre ler a matriz
+        if self.player == 1:
+            self.player = 9
+        else:
+            self.player = 1
+        self.matriz_geral[linha][coluna] = self.player
+        
+        #mudado na aula de DesSog quarta
         
         """OK CLARAMENTE SE VE O PROBLEMA COM ESSE SWAP *se mata*
          Achei um legal na internet pra ficar flipando valores booleanos, vou dar commit nisso e atualizar depois
