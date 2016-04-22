@@ -20,7 +20,7 @@ class Tabuleiro:
         self.janela.columnconfigure(1, weight=1)
         self.janela.columnconfigure(2, weight=1)
         
-        self.caixa_de_texto = tk.Label(3, text="")
+#        self.caixa_de_texto = tk.Label(3, text="")
         
         self.botao_0_0 = tk.Button(self.janela)
         #self.botao_0_0.configure(command=)
@@ -62,5 +62,5 @@ class Tabuleiro:
     def iniciar(self):
         self.janela.mainloop()
             
-jogin = Tabuleiro()
-jogin.iniciar()
+jogo_da_velha = Tabuleiro()
+jogo_da_velha.iniciar()
