@@ -60,6 +60,9 @@ class Tabuleiro:
         self.botao_2_2.configure(command=Jogo.recebe_jogada(2,2))
         self.botao_2_2.grid(row=2, column=2, stick="nsew")
         
+    def botao_o_o_clicado(self):
+        
+        
         
     def iniciar(self):
         self.janela.mainloop()
