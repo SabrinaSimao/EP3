@@ -24,8 +24,11 @@ class Tabuleiro:
         self.caixa_de_texto = tk.Label(self.janela, text="Jogador X")
         self.caixa_de_texto.grid(row=3, column=0 , columnspan=3 )
         
+        #if self.player == 1:
+            
+        
         self.botao_0_0 = tk.Button(self.janela)
-        self.botao_0_0.configure(command= Jogo.recebe_jogada(0,0))
+        self.botao_0_0.configure(command= self.botao_0_0_clicado)
         self.botao_0_0.grid(row=0, column=0, stick="nsew")
         
         self.botao_0_1 = tk.Button(self.janela)
@@ -59,8 +62,17 @@ class Tabuleiro:
         self.botao_2_2 = tk.Button(self.janela)
         self.botao_2_2.configure(command=Jogo.recebe_jogada(2,2))
         self.botao_2_2.grid(row=2, column=2, stick="nsew")
+                
         
-    #def botao_o_o_clicado(self):
+    def botao_0_0_clicado(self):
+        if Jogo.player == 1:
+            self.botao_0_0.configure(text= "X")
+            self.botao_0_0.configure(font = "Arial 10")
+        else:
+            self.botao_0_0.configure(text= "O")
+            self.botao_0_0.configure(font = "Arial 10")
+        Jogo.recebe_jogada(0,0)
+        self.botao_0_0.configure(state="disable")
         
         
         
