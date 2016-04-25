@@ -62,19 +62,7 @@ class Tabuleiro:
         self.botao_2_2.configure(command= self.botao_2_2_clicado)
         self.botao_2_2.grid(row=2, column=2, stick="nsew")
         
-        if Jogo.verifica_ganhador() == 1:
-            self.caixa_de_texto.configure(text= "O GANHOU")
-            Jogo.limpa_jogadas()
-        elif Jogo.verifica_ganhador()==2:
-            self.caixa_de_texto.configure(text= "X GANHOU")
-            Jogo.limpa_jogadas()
-            print("X Ganhou")
-        elif Jogo.verifica_ganhador() == 0:
-            self.caixa_de_texto.configure(text= "DEU VELHA")
-            print("deu velha")
-            Jogo.limpa_jogadas()
-        else:
-            pass
+        self.reiniciar
 
         
     def botao_0_0_clicado(self):
@@ -90,6 +78,20 @@ class Tabuleiro:
         Jogo.recebe_jogada(0,0)
         self.botao_0_0.configure(state="disable")
         
+        if Jogo.verifica_ganhador() == 1:
+            self.caixa_de_texto.configure(text= "X GANHOU")
+            #Jogo.limpa_jogadas()
+        elif Jogo.verifica_ganhador()==2:
+            self.caixa_de_texto.configure(text= "O GANHOU")
+           # Jogo.limpa_jogadas()
+            print("O Ganhou")
+        elif Jogo.verifica_ganhador() == 0:
+            self.caixa_de_texto.configure(text= "DEU VELHA")
+            print("deu velha")
+            Jogo.limpa_jogadas()
+        else:
+            pass
+        
     def botao_0_1_clicado(self):
         if Jogo.player == 1:
             self.botao_0_1.configure(text= "X")
@@ -101,6 +103,20 @@ class Tabuleiro:
             self.caixa_de_texto.configure(text= "Vez do X")
         Jogo.recebe_jogada(0,1)
         self.botao_0_1.configure(state="disable")
+
+        if Jogo.verifica_ganhador() == 1:
+            self.caixa_de_texto.configure(text= "X GANHOU")
+            Jogo.limpa_jogadas()
+        elif Jogo.verifica_ganhador()==2:
+            self.caixa_de_texto.configure(text= "O GANHOU")
+            Jogo.limpa_jogadas()
+            print("O Ganhou")
+        elif Jogo.verifica_ganhador() == 0:
+            self.caixa_de_texto.configure(text= "DEU VELHA")
+            print("deu velha")
+            Jogo.limpa_jogadas()
+        else:
+            pass
         
     def botao_0_2_clicado(self):
         if Jogo.player == 1:
@@ -113,6 +129,20 @@ class Tabuleiro:
             self.caixa_de_texto.configure(text= "Vez do X")
         Jogo.recebe_jogada(0,2)
         self.botao_0_2.configure(state="disable")
+
+        if Jogo.verifica_ganhador() == 1:
+            self.caixa_de_texto.configure(text= "X GANHOU")
+            Jogo.limpa_jogadas()
+        elif Jogo.verifica_ganhador()==2:
+            self.caixa_de_texto.configure(text= "O GANHOU")
+            Jogo.limpa_jogadas()
+            print("O Ganhou")
+        elif Jogo.verifica_ganhador() == 0:
+            self.caixa_de_texto.configure(text= "DEU VELHA")
+            print("deu velha")
+            Jogo.limpa_jogadas()
+        else:
+            pass
         
     def botao_1_0_clicado(self):
         if Jogo.player == 1:
@@ -125,7 +155,21 @@ class Tabuleiro:
             self.caixa_de_texto.configure(text= "Vez do X")
         Jogo.recebe_jogada(1,0)
         self.botao_1_0.configure(state="disable")
-    
+
+        if Jogo.verifica_ganhador() == 1:
+            self.caixa_de_texto.configure(text= "X GANHOU")
+            Jogo.limpa_jogadas()
+        elif Jogo.verifica_ganhador()==2:
+            self.caixa_de_texto.configure(text= "O GANHOU")
+            Jogo.limpa_jogadas()
+            print("O Ganhou")
+        elif Jogo.verifica_ganhador() == 0:
+            self.caixa_de_texto.configure(text= "DEU VELHA")
+            print("deu velha")
+            Jogo.limpa_jogadas()
+        else:
+            pass    
+
     def botao_1_1_clicado(self):
         if Jogo.player == 1:
             self.botao_1_1.configure(text= "X")
@@ -137,7 +181,21 @@ class Tabuleiro:
             self.caixa_de_texto.configure(text= "Vez do X")
         Jogo.recebe_jogada(1,1)
         self.botao_1_1.configure(state="disable")
-    
+
+        if Jogo.verifica_ganhador() == 1:
+            self.caixa_de_texto.configure(text= "X GANHOU")
+            Jogo.limpa_jogadas()
+        elif Jogo.verifica_ganhador()==2:
+            self.caixa_de_texto.configure(text= "O GANHOU")
+            Jogo.limpa_jogadas()
+            print("O Ganhou")
+        elif Jogo.verifica_ganhador() == 0:
+            self.caixa_de_texto.configure(text= "DEU VELHA")
+            print("deu velha")
+            Jogo.limpa_jogadas()
+        else:
+            pass
+        
     def botao_1_2_clicado(self):
         if Jogo.player == 1:
             self.botao_1_2.configure(text= "X")
@@ -149,7 +207,21 @@ class Tabuleiro:
             self.caixa_de_texto.configure(text= "Vez do X")
         Jogo.recebe_jogada(2,0)
         self.botao_1_2.configure(state="disable")
-    
+
+        if Jogo.verifica_ganhador() == 1:
+            self.caixa_de_texto.configure(text= "X GANHOU")
+            Jogo.limpa_jogadas()
+        elif Jogo.verifica_ganhador()==2:
+            self.caixa_de_texto.configure(text= "O GANHOU")
+            Jogo.limpa_jogadas()
+            print("O Ganhou")
+        elif Jogo.verifica_ganhador() == 0:
+            self.caixa_de_texto.configure(text= "DEU VELHA")
+            print("deu velha")
+            Jogo.limpa_jogadas()
+        else:
+            pass
+        
     def botao_2_0_clicado(self):
         if Jogo.player == 1:
             self.botao_2_0.configure(text= "X")
@@ -161,7 +233,21 @@ class Tabuleiro:
             self.caixa_de_texto.configure(text= "Vez do X")
         Jogo.recebe_jogada(2,0)
         self.botao_2_0.configure(state="disable")
-    
+
+        if Jogo.verifica_ganhador() == 1:
+            self.caixa_de_texto.configure(text= "X GANHOU")
+            Jogo.limpa_jogadas()
+        elif Jogo.verifica_ganhador()==2:
+            self.caixa_de_texto.configure(text= "O GANHOU")
+            Jogo.limpa_jogadas()
+            print("O Ganhou")
+        elif Jogo.verifica_ganhador() == 0:
+            self.caixa_de_texto.configure(text= "DEU VELHA")
+            print("deu velha")
+            Jogo.limpa_jogadas()
+        else:
+            pass    
+
     def botao_2_1_clicado(self):
         if Jogo.player == 1:
             self.botao_2_1.configure(text= "X")
@@ -173,7 +259,21 @@ class Tabuleiro:
             self.caixa_de_texto.configure(text= "Vez do X")
         Jogo.recebe_jogada(2,1)
         self.botao_2_1.configure(state="disable")
-    
+
+        if Jogo.verifica_ganhador() == 1:
+            self.caixa_de_texto.configure(text= "X GANHOU")
+            Jogo.limpa_jogadas()
+        elif Jogo.verifica_ganhador()==2:
+            self.caixa_de_texto.configure(text= "O GANHOU")
+            Jogo.limpa_jogadas()
+            print("X Ganhou")
+        elif Jogo.verifica_ganhador() == 0:
+            self.caixa_de_texto.configure(text= "DEU VELHA")
+            print("deu velha")
+            Jogo.limpa_jogadas()
+        else:
+            pass
+        
     def botao_2_2_clicado(self):
         if Jogo.player == 1:
             self.botao_2_2.configure(text= "X")
@@ -186,17 +286,27 @@ class Tabuleiro:
         Jogo.recebe_jogada(2,2)
         self.botao_2_2.configure(state="disable")
         
-    
+        if Jogo.verifica_ganhador() == 1:
+            self.caixa_de_texto.configure(text= "X GANHOU")
+            Jogo.limpa_jogadas()
+        elif Jogo.verifica_ganhador()==2:
+            self.caixa_de_texto.configure(text= "O GANHOU")
+            Jogo.limpa_jogadas()
+            print("X Ganhou")
+        elif Jogo.verifica_ganhador() == 0:
+            self.caixa_de_texto.configure(text= "DEU VELHA")
+            print("deu velha")
+            Jogo.limpa_jogadas()
+        else:
+            pass
+        
     def iniciar(self):
         self.janela.mainloop()
         
     def reiniciar(self):
-        if Jogo.matriz_geral == [[0,0,0],[0,0,0],[0,0,0]]:
-            self.iniciar
-        else:
-            pass            
+                    
         
-        
+
     
             
 jogo_da_velha = Tabuleiro()

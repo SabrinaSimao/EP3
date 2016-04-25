@@ -32,7 +32,6 @@ class Jogo:
             Dessa forma nao precisamos checar um por um"""
         #verificar as horizontais
         #NAO SE SABE AINDA SE O PRIMEIRO VAI SER A BOLA OU O X
-        print("test")
         for i in range(0,3):
             if sum(self.matriz_geral[i])==27:
                 return 1
