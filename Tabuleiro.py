@@ -62,17 +62,17 @@ class Tabuleiro:
         self.botao_2_2.configure(command= self.botao_2_2_clicado)
         self.botao_2_2.grid(row=2, column=2, stick="nsew")
         
-        if Jogo.verifica_ganhador == 1:
+        if Jogo.verifica_ganhador() == 1:
             self.caixa_de_texto.configure(text= "O GANHOU")
-            Jogo.limpa_jogadas
-        elif Jogo.verifica_ganhador==2:
+            Jogo.limpa_jogadas()
+        elif Jogo.verifica_ganhador()==2:
             self.caixa_de_texto.configure(text= "X GANHOU")
-            Jogo.limpa_jogadas
+            Jogo.limpa_jogadas()
             print("X Ganhou")
-        elif Jogo.verifica_ganhador == 0:
+        elif Jogo.verifica_ganhador() == 0:
             self.caixa_de_texto.configure(text= "DEU VELHA")
             print("deu velha")
-            Jogo.limpa_jogadas
+            Jogo.limpa_jogadas()
         else:
             pass
 
