@@ -21,8 +21,8 @@ class Tabuleiro:
         self.janela.columnconfigure(1, weight=2)
         self.janela.columnconfigure(2, weight=2)
         
-        self.caixa_de_texto = tk.Label(self.janela, text="Jogador 1")
-        self.caixa_de_texto.grid(row=3, stick="nsew")
+        self.caixa_de_texto = tk.Label(self.janela, text="Jogador X")
+        self.caixa_de_texto.grid(row=3, column=0 , columnspan=3 )
         
         self.botao_0_0 = tk.Button(self.janela)
         self.botao_0_0.configure(command= Jogo.recebe_jogada(0,0))
@@ -60,7 +60,7 @@ class Tabuleiro:
         self.botao_2_2.configure(command=Jogo.recebe_jogada(2,2))
         self.botao_2_2.grid(row=2, column=2, stick="nsew")
         
-    def botao_o_o_clicado(self):
+    #def botao_o_o_clicado(self):
         
         
         
