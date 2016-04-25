@@ -69,6 +69,5 @@ class Jogo:
     
     
     def limpa_jogadas(self):
-        if self.verifica_ganhador != -1:
-            self.matriz_geral = [[0,0,0],[0,0,0],[0,0,0]]
+        self.matriz_geral = [[0,0,0],[0,0,0],[0,0,0]]
         

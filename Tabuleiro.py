@@ -68,8 +68,10 @@ class Tabuleiro:
         elif Jogo.verifica_ganhador==2:
             self.caixa_de_texto.configure(text= "X GANHOU")
             Jogo.limpa_jogadas
+            print("X Ganhou")
         elif Jogo.verifica_ganhador == 0:
             self.caixa_de_texto.configure(text= "DEU VELHA")
+            print("deu velha")
             Jogo.limpa_jogadas
         else:
             pass
@@ -187,6 +189,13 @@ class Tabuleiro:
     
     def iniciar(self):
         self.janela.mainloop()
+        
+    def reiniciar(self):
+        if Jogo.matriz_geral == [[0,0,0],[0,0,0],[0,0,0]]:
+            self.iniciar
+        else:
+            pass            
+        
         
     
             
