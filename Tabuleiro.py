@@ -21,8 +21,7 @@ class Tabuleiro:
         self.janela.columnconfigure(1, weight=2)
         self.janela.columnconfigure(2, weight=2)
         
-        self.jogador_da_vez= "Jogador X"        
-        self.caixa_de_texto = tk.Label(self.janela, text= self.jogador_da_vez)
+        self.caixa_de_texto = tk.Label(self.janela, text= "Vez do X")
         self.caixa_de_texto.grid(row=3, column=0 , columnspan=3 )
 
             
@@ -62,17 +61,30 @@ class Tabuleiro:
         self.botao_2_2 = tk.Button(self.janela)
         self.botao_2_2.configure(command= self.botao_2_2_clicado)
         self.botao_2_2.grid(row=2, column=2, stick="nsew")
-                
+        
+        if Jogo.verifica_ganhador == 1:
+            self.caixa_de_texto.configure(text= "O GANHOU")
+            Jogo.limpa_jogadas
+        elif Jogo.verifica_ganhador==2:
+            self.caixa_de_texto.configure(text= "X GANHOU")
+            Jogo.limpa_jogadas
+        elif Jogo.verifica_ganhador == 0:
+            self.caixa_de_texto.configure(text= "DEU VELHA")
+            Jogo.limpa_jogadas
+        else:
+            pass
+
         
     def botao_0_0_clicado(self):
         if Jogo.player == 1:
             self.botao_0_0.configure(text= "X")
             self.botao_0_0.configure(font = "Arial 10")
-            self.jogador_da_vez = "Jogador O"
+            self.caixa_de_texto.configure(text= "Vez do O")
+
         else:
             self.botao_0_0.configure(text= "O")
             self.botao_0_0.configure(font = "Arial 10")
-            self.jogador_da_vez = "Jogador X"
+            self.caixa_de_texto.configure(text= "Vez do X")
         Jogo.recebe_jogada(0,0)
         self.botao_0_0.configure(state="disable")
         
@@ -80,11 +92,11 @@ class Tabuleiro:
         if Jogo.player == 1:
             self.botao_0_1.configure(text= "X")
             self.botao_0_1.configure(font = "Arial 10")
-            self.jogador_da_vez = "Jogador O"
+            self.caixa_de_texto.configure(text= "Vez do O")
         else:
             self.botao_0_1.configure(text= "O")
             self.botao_0_1.configure(font = "Arial 10")
-            self.jogador_da_vez = "Jogador X"
+            self.caixa_de_texto.configure(text= "Vez do X")
         Jogo.recebe_jogada(0,1)
         self.botao_0_1.configure(state="disable")
         
@@ -92,11 +104,11 @@ class Tabuleiro:
         if Jogo.player == 1:
             self.botao_0_2.configure(text= "X")
             self.botao_0_2.configure(font = "Arial 10")
-            self.jogador_da_vez = "Jogador O"
+            self.caixa_de_texto.configure(text= "Vez do O")
         else:
             self.botao_0_2.configure(text= "O")
             self.botao_0_2.configure(font = "Arial 10")
-            self.jogador_da_vez = "Jogador X"
+            self.caixa_de_texto.configure(text= "Vez do X")
         Jogo.recebe_jogada(0,2)
         self.botao_0_2.configure(state="disable")
         
@@ -104,11 +116,11 @@ class Tabuleiro:
         if Jogo.player == 1:
             self.botao_1_0.configure(text= "X")
             self.botao_1_0.configure(font = "Arial 10")
-            self.jogador_da_vez = "Jogador O"
+            self.caixa_de_texto.configure(text= "Vez do O")
         else:
             self.botao_1_0.configure(text= "O")
-            self.botao__1.configure(font = "Arial 10")
-            self.jogador_da_vez = "Jogador X"
+            self.botao_1_0.configure(font = "Arial 10")
+            self.caixa_de_texto.configure(text= "Vez do X")
         Jogo.recebe_jogada(1,0)
         self.botao_1_0.configure(state="disable")
     
@@ -116,11 +128,11 @@ class Tabuleiro:
         if Jogo.player == 1:
             self.botao_1_1.configure(text= "X")
             self.botao_1_1.configure(font = "Arial 10")
-            self.jogador_da_vez = "Jogador O"
+            self.caixa_de_texto.configure(text= "Vez do O")
         else:
             self.botao_1_1.configure(text= "O")
             self.botao_1_1.configure(font = "Arial 10")
-            self.jogador_da_vez = "Jogador X"
+            self.caixa_de_texto.configure(text= "Vez do X")
         Jogo.recebe_jogada(1,1)
         self.botao_1_1.configure(state="disable")
     
@@ -128,11 +140,11 @@ class Tabuleiro:
         if Jogo.player == 1:
             self.botao_1_2.configure(text= "X")
             self.botao_1_2.configure(font = "Arial 10")
-            self.jogador_da_vez = "Jogador O"
+            self.caixa_de_texto.configure(text= "Vez do O")
         else:
             self.botao_1_2.configure(text= "O")
             self.botao_1_2.configure(font = "Arial 10")
-            self.jogador_da_vez = "Jogador X"
+            self.caixa_de_texto.configure(text= "Vez do X")
         Jogo.recebe_jogada(2,0)
         self.botao_1_2.configure(state="disable")
     
@@ -140,11 +152,11 @@ class Tabuleiro:
         if Jogo.player == 1:
             self.botao_2_0.configure(text= "X")
             self.botao_2_0.configure(font = "Arial 10")
-            self.jogador_da_vez = "Jogador O"
+            self.caixa_de_texto.configure(text= "Vez do O")
         else:
             self.botao_2_0.configure(text= "O")
             self.botao_2_0.configure(font = "Arial 10")
-            self.jogador_da_vez = "Jogador X"
+            self.caixa_de_texto.configure(text= "Vez do X")
         Jogo.recebe_jogada(2,0)
         self.botao_2_0.configure(state="disable")
     
@@ -152,11 +164,11 @@ class Tabuleiro:
         if Jogo.player == 1:
             self.botao_2_1.configure(text= "X")
             self.botao_2_1.configure(font = "Arial 10")
-            self.jogador_da_vez = "Jogador O"
+            self.caixa_de_texto.configure(text= "Vez do O")
         else:
             self.botao_2_1.configure(text= "O")
             self.botao_2_1.configure(font = "Arial 10")
-            self.jogador_da_vez = "Jogador X"
+            self.caixa_de_texto.configure(text= "Vez do X")
         Jogo.recebe_jogada(2,1)
         self.botao_2_1.configure(state="disable")
     
@@ -164,13 +176,14 @@ class Tabuleiro:
         if Jogo.player == 1:
             self.botao_2_2.configure(text= "X")
             self.botao_2_2.configure(font = "Arial 10")
-            self.jogador_da_vez = "Jogador O"
+            self.caixa_de_texto.configure(text= "Vez do O")
         else:
             self.botao_2_2.configure(text= "O")
             self.botao_2_2.configure(font = "Arial 10")
-            self.jogador_da_vez = "Jogador X"
+            self.caixa_de_texto.configure(text= "Vez do X")
         Jogo.recebe_jogada(2,2)
         self.botao_2_2.configure(state="disable")
+        
     
     def iniciar(self):
         self.janela.mainloop()

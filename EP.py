@@ -16,7 +16,7 @@ class Jogo:
         if self.player == 1:
             self.player = 9
         else:
-            self.player = 1
+            self.player = 1           
         self.matriz_geral[linha][coluna] = self.player
         
         #mudado na aula de DesSog quarta
