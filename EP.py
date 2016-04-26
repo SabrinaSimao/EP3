@@ -10,6 +10,7 @@ class Jogo:
     def __init__ (self):
         self.matriz_geral = [[0,0,0],[0,0,0],[0,0,0]]
         self.player = 1
+        self.velha= 0
         #alguem me salva com isso?!?! :(
         
     def recebe_jogada(self, linha, coluna):
@@ -32,6 +33,7 @@ class Jogo:
             Dessa forma nao precisamos checar um por um"""
         #verificar as horizontais
         #NAO SE SABE AINDA SE O PRIMEIRO VAI SER A BOLA OU O X
+        
         for i in range(0,3):
             if sum(self.matriz_geral[i])==27:
                 return 1
@@ -58,14 +60,16 @@ class Jogo:
         #verificar se empatou
         #usando a logica importada da internet, esse medoto soma todos os elementos da matriz, de forma que se o
         #resultado for 41, é empate (nota-se que o primeiro tem que ser o de valor 1, e o segundo jogador, o de valor 9)
-        if 0 not in self.matriz_geral:
-            a=0
-            for i in range(0,3):
-                a+= sum(self.matriz_geral[i])
-            if a==41:
-                return 0
+        for i in range (0,3):
+            for j in range (0,3):
+                if  self.matriz_geral[i][j]==0:
+                    return -1
+        
         else:
-            return -1
+            return 0
+            
+                        
+                
     
     
     def limpa_jogadas(self):
