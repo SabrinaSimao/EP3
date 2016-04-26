@@ -23,7 +23,7 @@ class Tabuleiro:
         
         self.caixa_de_texto = tk.Label(self.janela, text= "Vez do X")
         self.caixa_de_texto.configure(font= "Courie 10")        
-        self.caixa_de_texto.grid(row=3, column=0 , columnspan=3 )
+        self.caixa_de_texto.grid(row=3, column=0 , columnspan=2 )
 
             
         
@@ -63,6 +63,12 @@ class Tabuleiro:
         self.botao_2_2.configure(command= self.botao_2_2_clicado)
         self.botao_2_2.grid(row=2, column=2, stick="nsew")
         
+        self.botao_reiniciar= tk.Button(self.janela)        
+        self.botao_reiniciar.configure(text= "Reiniciar")
+        self.botao_reiniciar.configure(font= "Courier 10")
+        self.botao_reiniciar.configure(command=self.reiniciar)
+        self.botao_reiniciar.grid(row=3, column=2, columnspan=3, stick="nsew")
+        
         #self.reiniciar
 
         
@@ -83,15 +89,17 @@ class Tabuleiro:
         if jogo.verifica_ganhador() == 1:
             self.caixa_de_texto.configure(text= "X GANHOU")
             self.caixa_de_texto.configure(font= "Courie 10")
+            self.reiniciar
         elif jogo.verifica_ganhador()==2:
             self.caixa_de_texto.configure(text= "O GANHOU")
             self.caixa_de_texto.configure(font= "Courie 10")
+            self.reiniciar
             print("O Ganhou")
         elif jogo.verifica_ganhador() == 0:
             self.caixa_de_texto.configure(text= "DEU VELHA")
             self.caixa_de_texto.configure(font= "Courie 10")            
             print("deu velha")
-            jogo.limpa_jogadas()
+            self.reiniciar
         
     def botao_0_1_clicado(self):
         if jogo.player == 1:
@@ -110,17 +118,17 @@ class Tabuleiro:
         if jogo.verifica_ganhador() == 1:
             self.caixa_de_texto.configure(text= "X GANHOU")
             self.caixa_de_texto.configure(font= "Courie 10")
-            jogo.limpa_jogadas()
+            self.reiniciar
         elif jogo.verifica_ganhador()==2:
             self.caixa_de_texto.configure(text= "O GANHOU")
             self.caixa_de_texto.configure(font= "Courie 10")
-            jogo.limpa_jogadas()
+            self.reiniciar
             print("O Ganhou")
         elif jogo.verifica_ganhador() == 0:
             self.caixa_de_texto.configure(text= "DEU VELHA")
             self.caixa_de_texto.configure(font= "Courie 10")
             print("deu velha")
-            jogo.limpa_jogadas()
+            self.reiniciar
         else:
             pass
         
@@ -141,17 +149,17 @@ class Tabuleiro:
         if jogo.verifica_ganhador() == 1:
             self.caixa_de_texto.configure(text= "X GANHOU")
             self.caixa_de_texto.configure(font= "Courie 10")
-            jogo.limpa_jogadas()
+            self.reiniciar
         elif jogo.verifica_ganhador()==2:
             self.caixa_de_texto.configure(text= "O GANHOU")
             self.caixa_de_texto.configure(font= "Courie 10")
-            jogo.limpa_jogadas()
+            self.reiniciar
             print("O Ganhou")
         elif jogo.verifica_ganhador() == 0:
             self.caixa_de_texto.configure(text= "DEU VELHA")
             self.caixa_de_texto.configure(font= "Courie 10")
             print("deu velha")
-            jogo.limpa_jogadas()
+            self.reiniciar
         else:
             pass
         
@@ -171,17 +179,17 @@ class Tabuleiro:
         if jogo.verifica_ganhador() == 1:
             self.caixa_de_texto.configure(text= "X GANHOU")
             self.caixa_de_texto.configure(font= "Courie 10")
-            jogo.limpa_jogadas()
+            self.reiniciar
         elif jogo.verifica_ganhador()==2:
             self.caixa_de_texto.configure(text= "O GANHOU")
             self.caixa_de_texto.configure(font= "Courie 10")
-            jogo.limpa_jogadas()
+            self.reiniciar
             print("O Ganhou")
         elif jogo.verifica_ganhador() == 0:
             self.caixa_de_texto.configure(text= "DEU VELHA")
             self.caixa_de_texto.configure(font= "Courie 10")
             print("deu velha")
-            jogo.limpa_jogadas()
+            self.reiniciar
         else:
             pass    
 
@@ -202,17 +210,17 @@ class Tabuleiro:
         if jogo.verifica_ganhador() == 1:
             self.caixa_de_texto.configure(text= "X GANHOU")
             self.caixa_de_texto.configure(font= "Courie 10")
-            jogo.limpa_jogadas()
+            self.reiniciar
         elif jogo.verifica_ganhador()==2:
             self.caixa_de_texto.configure(text= "O GANHOU")
             self.caixa_de_texto.configure(font= "Courie 10")
-            jogo.limpa_jogadas()
+            self.reiniciar
             print("O Ganhou")
         elif jogo.verifica_ganhador() == 0:
             self.caixa_de_texto.configure(text= "DEU VELHA")
             self.caixa_de_texto.configure(font= "Courie 10")
             print("deu velha")
-            jogo.limpa_jogadas()
+            self.reiniciar
         else:
             pass
         
@@ -233,17 +241,17 @@ class Tabuleiro:
         if jogo.verifica_ganhador() == 1:
             self.caixa_de_texto.configure(text= "X GANHOU")
             self.caixa_de_texto.configure(font= "Courie 10")
-            jogo.limpa_jogadas()
+            self.reiniciar
         elif jogo.verifica_ganhador()==2:
             self.caixa_de_texto.configure(text= "O GANHOU")
             self.caixa_de_texto.configure(font= "Courie 10")
-            jogo.limpa_jogadas()
+            self.reiniciar
             print("O Ganhou")
         elif jogo.verifica_ganhador() == 0:
             self.caixa_de_texto.configure(text= "DEU VELHA")
             self.caixa_de_texto.configure(font= "Courie 10")
             print("deu velha")
-            jogo.limpa_jogadas()
+            self.reiniciar
 
         
     def botao_2_0_clicado(self):
@@ -263,17 +271,17 @@ class Tabuleiro:
         if jogo.verifica_ganhador() == 1:
             self.caixa_de_texto.configure(text= "X GANHOU")
             self.caixa_de_texto.configure(font= "Courie 10")
-            jogo.limpa_jogadas()
+            self.reiniciar
         elif jogo.verifica_ganhador()==2:
             self.caixa_de_texto.configure(text= "O GANHOU")
             self.caixa_de_texto.configure(font= "Courie 10")
-            jogo.limpa_jogadas()
+            self.reiniciar
             print("O Ganhou")
         elif jogo.verifica_ganhador() == 0:
             self.caixa_de_texto.configure(text= "DEU VELHA")
             self.caixa_de_texto.configure(font= "Courie 10")
             print("deu velha")
-            jogo.limpa_jogadas()
+            self.reiniciar
         else:
             pass    
 
@@ -294,17 +302,17 @@ class Tabuleiro:
         if jogo.verifica_ganhador() == 1:
             self.caixa_de_texto.configure(text= "X GANHOU")
             self.caixa_de_texto.configure(font= "Courie 10")
-            jogo.limpa_jogadas()
+            self.reiniciar
         elif jogo.verifica_ganhador()==2:
             self.caixa_de_texto.configure(text= "O GANHOU")
             self.caixa_de_texto.configure(font= "Courie 10")
-            jogo.limpa_jogadas()
+            self.reiniciar
             print("X Ganhou")
         elif jogo.verifica_ganhador() == 0:
             self.caixa_de_texto.configure(text= "DEU VELHA")
             self.caixa_de_texto.configure(font= "Courie 10")
             print("deu velha")
-            jogo.limpa_jogadas()
+            self.reiniciar
         
     def botao_2_2_clicado(self):
         if jogo.player == 1:
@@ -323,27 +331,45 @@ class Tabuleiro:
         if jogo.verifica_ganhador() == 1:
             self.caixa_de_texto.configure(text= "X GANHOU")
             self.caixa_de_texto.configure(font= "Courie 10")
-            jogo.limpa_jogadas()
+            self.reiniciar
         elif jogo.verifica_ganhador()==2:
             self.caixa_de_texto.configure(text= "O GANHOU")
             self.caixa_de_texto.configure(font= "Courie 10")
-            jogo.limpa_jogadas()
+            self.reiniciar
             print("X Ganhou")
         elif jogo.verifica_ganhador() == 0:
             self.caixa_de_texto.configure(text= "DEU VELHA")
             self.caixa_de_texto.configure(font= "Courie 10")
             print("deu velha")
-            jogo.limpa_jogadas()
+            self.reiniciar
         else:
             pass
         
     def iniciar(self):
         self.janela.mainloop()
         
-#    def reiniciar(self):
-                    
-        
-
+    def reiniciar(self):
+        jogo.limpa_jogadas()
+        self.botao_0_0.configure(text= "")
+        self.botao_0_0.configure(font = "Courie 10")                   
+        self.botao_0_1.configure(text= "")
+        self.botao_0_1.configure(font = "Courie 10")
+        self.botao_0_2.configure(text= "")
+        self.botao_0_2.configure(font = "Courie 10")
+        self.botao_1_0.configure(text= "")
+        self.botao_1_0.configure(font = "Courie 10")
+        self.botao_1_1.configure(text= "")
+        self.botao_1_1.configure(font = "Courie 10")
+        self.botao_1_2.configure(text= "")
+        self.botao_1_2.configure(font = "Courie 10")
+        self.botao_2_0.configure(text= "")
+        self.botao_2_0.configure(font = "Courie 10")
+        self.botao_2_1.configure(text= "")
+        self.botao_2_1.configure(font = "Courie 10")
+        self.botao_2_2.configure(text= "")
+        self.botao_2_2.configure(font = "Courie 10")
+        self.caixa_de_texto.configure(text= "Vez do X")
+        self.caixa_de_texto.configure(font= "Courie 10")
     
             
 jogo_da_velha = Tabuleiro()
