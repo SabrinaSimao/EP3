@@ -9,9 +9,7 @@ class Jogo:
     
     def __init__ (self):
         self.matriz_geral = [[0,0,0],[0,0,0],[0,0,0]]
-        self.player = 1
-        self.velha= 0
-        #alguem me salva com isso?!?! :(
+        self.player = 1 
         
     def recebe_jogada(self, linha, coluna):
         if self.player == 1:
@@ -19,7 +17,6 @@ class Jogo:
         else:
             self.player = 1           
         self.matriz_geral[linha][coluna] = self.player
-        
         #mudado na aula de DesSog quarta
         
         """OK CLARAMENTE SE VE O PROBLEMA COM ESSE SWAP *se mata*
@@ -61,14 +58,12 @@ class Jogo:
         #usando a logica importada da internet, esse medoto soma todos os elementos da matriz, de forma que se o
         #resultado for 41, é empate (nota-se que o primeiro tem que ser o de valor 1, e o segundo jogador, o de valor 9)
         for i in range (0,3):
-            for j in range (0,3):
-                if  self.matriz_geral[i][j]==0:
-                    return -1
-        
-        else:
-            return 0
-            
-                        
+            if 0 in self.matriz_geral[i]:
+                return -1
+                
+
+        return 0
+               
                 
     
     
