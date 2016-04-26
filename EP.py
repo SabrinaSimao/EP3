@@ -57,22 +57,14 @@ class Jogo:
             if self.matriz_geral[0][2]==self.matriz_geral[1][1] and self.matriz_geral[2][0]==self.matriz_geral[1][1]:
                 return 2
         #verificar se empatou
-        #usando a logica importada da internet, esse medoto soma todos os elementos da matriz, de forma que se o
-        #resultado for 41, é empate (nota-se que o primeiro tem que ser o de valor 1, e o segundo jogador, o de valor 9)
+        #Mudei o metodo de verificar empate
         self.jogadas+=1
-        print (self.jogadas)
         if self.jogadas==27:
             return 0
-        
-        '''for i in range (0,3):
-            if 0 in self.matriz_geral[i]:
-                return -1
-           '''     
 
         return -1
                
-                
-    
+            
     
     def limpa_jogadas(self):
         self.matriz_geral = [[0,0,0],[0,0,0],[0,0,0]]
