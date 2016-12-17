@@ -4,7 +4,7 @@ Created on Tue Apr 19 08:45:35 2016
 
 @author: Gabriel Noal
 """
-
+from tkinter import *
 import tkinter as tk
 from EP import Jogo
 jogo = Jogo()
